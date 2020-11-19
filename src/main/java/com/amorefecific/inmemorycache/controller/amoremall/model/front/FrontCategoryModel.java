@@ -7,7 +7,8 @@ import lombok.*;
 @Builder
 @ToString
 @EqualsAndHashCode
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class FrontCategoryModel {
+    private String id;
+    private String categoryName;
 }

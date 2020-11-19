@@ -18,6 +18,8 @@ public class CategoryDataConverter {
 
     public FrontCategoryModel convert(Category category) {
         return FrontCategoryModel.builder()
+                .id(category.getId())
+                .categoryName(category.getCategoryName())
                 .build();
     }
 

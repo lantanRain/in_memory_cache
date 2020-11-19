@@ -4,12 +4,13 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.amorefecific.inmemorycache.controller")
-public class ServletInitializer extends SpringBootServletInitializer {
+//@ComponentScan("com.amorefecific.inmemorycache.controller")
+//public class ServletInitializer extends SpringBootServletInitializer {
+public class ServletInitializer {
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(InMemoryCacheApplication.class);
-    }
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(InMemoryCacheApplication.class);
+//    }
 
 }

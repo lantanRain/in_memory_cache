@@ -1,9 +1,30 @@
 package com.amorefecific.inmemorycache.core.amoremall.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.amorefecific.inmemorycache.core.amoremall.repository.cache.common.Cacheable;
+import lombok.*;
 
 @Getter
 @Setter
-public class Category {
+@ToString
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Category implements Cacheable<CategoryId> {
+
+    private CategoryId categoryId;
+    private String categoryName;
+
+    public void setId(String id) {
+        this.categoryId = CategoryId.fromId(id);
+    }
+
+    public String getId() {
+        return categoryId.getId();
+    }
+
+
+    @Override
+    public CategoryId getCacheId() {
+        return categoryId;
+    }
 }
