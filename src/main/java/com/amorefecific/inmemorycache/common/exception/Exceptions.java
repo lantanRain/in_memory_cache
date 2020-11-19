@@ -9,15 +9,19 @@ public abstract class Exceptions {
         return newExceptionInstance(message, null, null);
     }
 
-    public static CommonException newExcepton(Object... args) {
+    public static CommonException newException(Object... args) {
         return newExceptionInstance(null, null, args);
     }
 
-    public static CommonException newExcepton(Throwable t, Object... args) {
+    public static CommonException newException(Throwable t) {
+        return newExceptionInstance(null, t, null);
+    }
+
+    public static CommonException newException(Throwable t, Object... args) {
         return newExceptionInstance(null, t, args);
     }
 
-    public static CommonException newExcepton(String message, Throwable t, Object... args) {
+    public static CommonException newException(String message, Throwable t, Object... args) {
         return newExceptionInstance(message, t, args);
     }
 
