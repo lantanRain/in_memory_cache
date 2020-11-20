@@ -25,13 +25,14 @@ public class CategoryService {
 
     public List<Category> getCategoryList() {
         List<Category> categoryList = new ArrayList<>();
-        categoryList.add(new Category());
+//        categoryList.add(new Category());
+        categoryList.add(categoryH2Handler.getCategory(CategoryId.fromCategoryNo(1)));
 
         return categoryList;
     }
 
     public Category getCategory() {
-        CategoryId categoryId = CategoryId.fromId("001");
+        CategoryId categoryId = CategoryId.fromCategoryNo(1);
         return cacheBusiness.get(categoryId, categoryCacheHandler, categoryH2Handler::getCategory);
     }
 }

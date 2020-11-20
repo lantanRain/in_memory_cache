@@ -12,16 +12,14 @@ import lombok.*;
 public class Category implements Cacheable<CategoryId> {
 
     private CategoryId categoryId;
+    private Integer categoryNo;
     private String categoryName;
-
-    public void setId(String id) {
-        this.categoryId = CategoryId.fromId(id);
-    }
+    private Integer parentCategoryNo;
+    private Integer categoryDepth;
 
     public String getId() {
         return categoryId.getId();
     }
-
 
     @Override
     public CategoryId getCacheId() {
